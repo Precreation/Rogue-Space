@@ -8,7 +8,7 @@ int main(int args, char* argsv[])
 
 	while (!window.IsClosed())
 	{
-
+		window.PollEvents();
 	}
 
 	return 0;

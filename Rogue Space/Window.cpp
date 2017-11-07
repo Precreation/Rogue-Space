@@ -51,3 +51,22 @@ bool Window::IsClosed()
 {
 	return _closed;
 }
+
+void Window::PollEvents()
+{
+	SDL_Event event;
+
+	//Checks to see if there is an event
+	if (SDL_PollEvent(&event)) 
+	{
+		switch (event.type)
+		{
+		case SDL_QUIT:
+			_closed = true;
+			break;
+
+		default:
+			break;
+		}
+	}
+}

@@ -20,4 +20,5 @@ public:
 	~Window();
 
 	bool IsClosed();
+	void PollEvents();
 };
