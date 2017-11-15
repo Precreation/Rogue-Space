@@ -9,16 +9,19 @@ class Window
 private:
 	bool _closed;
 	int _width, _height;
+	SDL_Window *_window = nullptr;
 	string _title;
-	SDL_Window *_window;
 
 	bool Initialize();
 
 public:
+	SDL_Renderer *renderer;
+
 	Window();
 	Window(string title, int width, int height);
 	~Window();
 
 	bool IsClosed();
+	void RenderObjects();
 	void PollEvents();
 };

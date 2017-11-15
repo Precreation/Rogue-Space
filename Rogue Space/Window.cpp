@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Default Constructor
 Window::Window() 
 {
 	_title = "SDL Window";
@@ -12,6 +13,7 @@ Window::Window()
 	_closed = !Initialize();
 }
 
+// Constructor
 Window::Window(string title, int width, int height)
 {
 	_title = title;
@@ -21,37 +23,61 @@ Window::Window(string title, int width, int height)
 	_closed = !Initialize();
 }
 
+//Destructor
 Window::~Window()
 {
 	SDL_DestroyWindow(_window);
 	SDL_Quit();
 }
 
+// Initialize the components of the window
 bool Window::Initialize()
 {
-	//Attempt to initialize SDL Video
+	// Attempt to initialize SDL Video
 	if (!SDL_INIT_VIDEO)
 	{
 		cerr << "SDL could not initialize video.\n Error: $s", SDL_GetError();
 		return false;
 	}
 
+	// Attempt to create a window
 	_window = SDL_CreateWindow(_title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, _width, _height, 0);
 
+	// Check to see if window was changed
 	if (_window == nullptr)
 	{
-		cerr << "SDL could not create the window.\n Error: %s", SDL_GetError;
+		cerr << "SDL could not create the window.\n Error: %s", SDL_GetError();
+		return false;
+	}
+
+	// Creates a Renderer (Error check is in the object)
+	renderer = SDL_CreateRenderer(_window, -1, SDL_RENDERER_PRESENTVSYNC);
+
+	if (renderer == nullptr)
+	{
+		cerr << "SDL could not create the renderer.\n Error: %s", SDL_GetError();
 		return false;
 	}
 
 	return true;
 }
 
+// Get the value of _closed
 bool Window::IsClosed()
 {
 	return _closed;
 }
 
+// Renders objects to the window
+void Window::RenderObjects()
+{
+	SDL_RenderPresent(renderer);
+	SDL_SetRenderDrawColor(renderer, 0, 0, 200, 255);
+	SDL_RenderClear(renderer);
+
+}
+
+// Evaluate window events
 void Window::PollEvents()
 {
 	SDL_Event event;
