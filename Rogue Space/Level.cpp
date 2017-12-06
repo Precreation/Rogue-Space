@@ -5,7 +5,15 @@ using namespace std;
 template <int R, int C> 
 Level<R, C>::Level()
 {
+	_level = new Tile[R][C];
 }
+
+template <int R, int C>
+Level<R, C>::~Level()
+{
+	delete[] *_level;
+}
+
 
 template <int R, int C>
 void Level<R, C>::Draw(Window *window)

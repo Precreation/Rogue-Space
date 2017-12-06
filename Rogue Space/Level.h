@@ -1,14 +1,15 @@
 #pragma once
 #include "Tile.h"
 
-template<int C, int R>
+template<int R, int C>
 class Level 
 {
 private:
-	Tile _level[R][C];
+	Tile (*_level)[C];
 
 public:
 	Level();
-	
+	~Level();
+
 	void Draw(Window *window);
 };

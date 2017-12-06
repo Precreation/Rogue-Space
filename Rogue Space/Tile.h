@@ -1,8 +1,8 @@
 #pragma once
 #include <SDL.h>
-#include "Window.h"
+#include "RenderObject.h"
 
-class Tile
+class Tile : RenderObject
 {
 private:
 	// Constants
