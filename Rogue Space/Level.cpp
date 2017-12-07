@@ -9,14 +9,14 @@ Level<R, C>::Level()
 }
 
 template <int R, int C>
-Level<R, C>::~Level()
+Level<R,C>::~Level()
 {
 	delete[] *_level;
 }
 
 
 template <int R, int C>
-void Level<R, C>::Draw(Window *window)
+void Level<R,C>::Draw(Window *window)
 {
 	for (int row = 0; row < R; row++)
 		for (int column = 0; column < C; column++)

@@ -12,4 +12,5 @@ public:
 	~Level();
 
 	void Draw(Window *window);
+	Tile* GetTile(int row, int column);
 };

@@ -10,8 +10,13 @@ Tile::Tile()
 	_greenValue = 115;
 	_blueValue = 233;
 
+	_contents = new TileObject*[5];
 }
 
+Tile::~Tile() 
+{
+	delete[] _contents;
+}
 void Tile::Draw(Window *window)
 {
 	SDL_SetRenderDrawColor(window->renderer, _redValue, _greenValue, _blueValue, 255);

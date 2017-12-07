@@ -6,7 +6,7 @@ using namespace std;
 int main(int args, char* argsv[])
 {
 	Window window = Window("Rouge Space", 1280, 720);
-	Level<20,20> test;
+	Level<3, 3> test;
 
 	while (!window.IsClosed())
 	{
