@@ -15,8 +15,8 @@ Tile::Tile()
 
 Tile::~Tile() 
 {
-	delete[] _contents;
 }
+
 void Tile::Draw(Window *window)
 {
 	SDL_SetRenderDrawColor(window->renderer, _redValue, _greenValue, _blueValue, 255);
@@ -24,7 +24,6 @@ void Tile::Draw(Window *window)
 
 	if (_contents != nullptr)
 		_contents->Draw(window);
-
 }
 
 
@@ -36,6 +35,7 @@ TileObject* Tile::GetContents()
 void Tile::SetContents(TileObject* content)
 {
 	_contents = content;
+	cout << "Content was added to Tile " << this << endl;
 }
 
 void Tile::SetPosition(int xPosition, int yPosition)

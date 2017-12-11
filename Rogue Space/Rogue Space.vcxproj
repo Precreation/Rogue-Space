@@ -71,8 +71,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
-    <LibraryPath>C:\Github\Rogue-Space\Dependencies\SDL_Libraries;$(LibraryPath)</LibraryPath>
-    <IncludePath>C:\GitHub\Rogue-Space\Dependencies\SDL_Include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Github\Rogue Space\Dependencies\SDL_Libraries;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Github\Rogue Space\Dependencies\SDL_Include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

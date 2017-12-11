@@ -7,10 +7,10 @@ using namespace std;
 int main(int args, char* argsv[])
 {
 	Window window = Window("Rouge Space", 1280, 720);
-	Level<10, 10> test = Level<10,10>();
+	Level<2, 2> test = Level<2,2>();
 	Player *player = new Player();
 
-	test.GetTile(5, 5).SetContents(player);
+	test.GetTile(0, 0)->SetContents(player);
 	while (!window.IsClosed())
 	{
 		test.Draw(&window);

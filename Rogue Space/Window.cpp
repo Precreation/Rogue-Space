@@ -74,7 +74,6 @@ void Window::RenderObjects()
 	SDL_RenderPresent(renderer);
 	SDL_SetRenderDrawColor(renderer, 0, 0, 200, 255);
 	SDL_RenderClear(renderer);
-
 }
 
 // Evaluate window events
@@ -90,9 +89,33 @@ void Window::PollEvents()
 		case SDL_QUIT:
 			_closed = true;
 			break;
-
+		case SDL_KEYDOWN:
+			PollKeyboardEvents(event);
+			break;
 		default:
 			break;
 		}
+	}
+}
+
+void Window::PollKeyboardEvents(SDL_Event event)
+{
+	switch (event.key.keysym.sym)
+	{
+	case SDLK_w:
+		cout << "W is pressed" << endl;
+		break;
+	case SDLK_a:
+		cout << "A is pressed" << endl;
+		break;
+	case SDLK_s:
+		cout << "S is pressed" << endl;
+		break;
+	case SDLK_d:
+		cout << "D is pressed" << endl;
+		break;
+
+	default:
+		break;
 	}
 }

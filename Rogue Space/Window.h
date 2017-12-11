@@ -24,4 +24,5 @@ public:
 	bool IsClosed();
 	void RenderObjects();
 	void PollEvents();
+	void PollKeyboardEvents(SDL_Event event);
 };

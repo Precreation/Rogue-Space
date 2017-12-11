@@ -1,5 +1,8 @@
 #pragma once
 #include "Tile.h"
+#include <iostream>
+
+using namespace std;
 
 template<int R, int C>
 class Level
@@ -27,8 +30,9 @@ public:
 			}
 	}
 
-	Tile GetTile(int row, int col)
+	Tile* GetTile(int row, int col)
 	{
-		return _level[row][col];
+		cout << "Get: " << &_level[row][col] << endl;
+		return &_level[row][col];
 	}
 };
