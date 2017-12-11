@@ -10,7 +10,7 @@ Tile::Tile()
 	_greenValue = 115;
 	_blueValue = 233;
 
-	_contents = new TileObject*[5];
+	_contents = nullptr;
 }
 
 Tile::~Tile() 
@@ -21,6 +21,21 @@ void Tile::Draw(Window *window)
 {
 	SDL_SetRenderDrawColor(window->renderer, _redValue, _greenValue, _blueValue, 255);
 	SDL_RenderFillRect(window->renderer, &_tile);
+
+	if (_contents != nullptr)
+		_contents->Draw(window);
+
+}
+
+
+TileObject* Tile::GetContents()
+{
+	return _contents;
+}
+
+void Tile::SetContents(TileObject* content)
+{
+	_contents = content;
 }
 
 void Tile::SetPosition(int xPosition, int yPosition)

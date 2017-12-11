@@ -12,11 +12,14 @@ private:
 	// Class Declarations
 	int _redValue, _blueValue, _greenValue;
 	SDL_Rect _tile;
-	TileObject** _contents;
+	TileObject* _contents;
 
 public:
 	Tile();
 	~Tile();
 	void Draw(Window *window);
+
+	TileObject* GetContents();
+	void SetContents(TileObject* content);
 	void SetPosition(int xPosition, int yPosition);
 };

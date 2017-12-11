@@ -1,6 +1,6 @@
 #pragma once
 #include "TileObject.h"
 
-class Character : TileObject
+class Character : public TileObject
 {
 };

@@ -1,6 +1,6 @@
 #pragma once
 #include "RenderObject.h"
 
-class TileObject
+class TileObject : public RenderObject
 {
 };
