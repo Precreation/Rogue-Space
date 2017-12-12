@@ -121,7 +121,7 @@
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="EventController.cpp" />
-    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerCharacter.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
@@ -130,7 +130,7 @@
     <ClInclude Include="EventController.h" />
     <ClInclude Include="EventHandler.h" />
     <ClInclude Include="Level.h" />
-    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerCharacter.h" />
     <ClInclude Include="RenderObject.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="TileObject.h" />

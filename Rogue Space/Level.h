@@ -19,7 +19,7 @@ public:
 
 	~Level()
 	{
-		delete[] * _level;
+		delete[] _level;
 	}
 	
 	void Initialize() 
@@ -31,9 +31,16 @@ public:
 
 	void Draw(Window *window)
 	{
+		// Draw the level tiles
 		for (int row = 0; row < R; row++)
 			for (int column = 0; column < C; column++)
 				_level[row][column].Draw(window);
+
+		// Draw the tile contents
+		for (int row = 0; row < R; row++)
+			for (int column = 0; column < C; column++)
+				if (_level[row][column].GetContents() != nullptr)
+					_level[row][column].GetContents()->Draw(window);
 	}
 
 	Tile* GetTile(int row, int col)

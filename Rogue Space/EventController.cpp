@@ -18,11 +18,6 @@ void EventController::PollEvents()
 	}
 }
 
-void EventController::PollKeyboardEvents()
-{
-
-}
-
 void EventController::Subscribe(EventHandler *handler, SDL_EventType eventType)
 {
 	switch (eventType) 
