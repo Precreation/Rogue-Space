@@ -1,10 +1,11 @@
 #pragma once
 #include <SDL.h>
 #include <string>
+#include "EventHandler.h"
 
 using namespace std;
 
-class Window
+class Window : public EventHandler
 {
 private:
 	bool _closed;
@@ -23,6 +24,6 @@ public:
 
 	bool IsClosed();
 	void RenderObjects();
-	void PollEvents();
+	void EventHandle(SDL_Event event) override;
 	void PollKeyboardEvents(SDL_Event event);
 };

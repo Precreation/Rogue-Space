@@ -77,45 +77,7 @@ void Window::RenderObjects()
 }
 
 // Evaluate window events
-void Window::PollEvents()
+void Window::EventHandle(SDL_Event event)
 {
-	SDL_Event event;
-
-	//Checks to see if there is an event
-	if (SDL_PollEvent(&event)) 
-	{
-		switch (event.type)
-		{
-		case SDL_QUIT:
-			_closed = true;
-			break;
-		case SDL_KEYDOWN:
-			PollKeyboardEvents(event);
-			break;
-		default:
-			break;
-		}
-	}
-}
-
-void Window::PollKeyboardEvents(SDL_Event event)
-{
-	switch (event.key.keysym.sym)
-	{
-	case SDLK_w:
-		cout << "W is pressed" << endl;
-		break;
-	case SDLK_a:
-		cout << "A is pressed" << endl;
-		break;
-	case SDLK_s:
-		cout << "S is pressed" << endl;
-		break;
-	case SDLK_d:
-		cout << "D is pressed" << endl;
-		break;
-
-	default:
-		break;
-	}
+	_closed = true;
 }

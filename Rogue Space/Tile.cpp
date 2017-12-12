@@ -11,6 +11,8 @@ Tile::Tile()
 	_blueValue = 233;
 
 	_contents = nullptr;
+	cout << this << " Created" << endl;
+
 }
 
 Tile::~Tile() 
@@ -33,7 +35,8 @@ TileObject* Tile::GetContents()
 }
 
 void Tile::SetContents(TileObject* content)
-{
+{	
+	content->SetPosition(_tile.x, _tile.y);
 	_contents = content;
 	cout << "Content was added to Tile " << this << endl;
 }

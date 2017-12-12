@@ -9,7 +9,6 @@ class RenderObject
 public:
 	RenderObject() 
 	{
-		cout << "RenderObject Created" << endl;
 	}
 	virtual void Draw(Window *window) = 0;
 };

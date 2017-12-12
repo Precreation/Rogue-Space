@@ -1,14 +1,14 @@
 #pragma once
 #include "Character.h"
 
-class Player : public Character
+class Player : public Character, public EventHandler
 {
 private:
-	SDL_Rect _player;
 
 public:
 	Player();
 	~Player();
 
 	void Draw(Window *window);
+	void EventHandle(SDL_Event event) override;
 };

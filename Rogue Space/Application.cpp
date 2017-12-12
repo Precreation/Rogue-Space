@@ -1,20 +1,26 @@
+#include "EventController.h"
 #include "Window.h"
 #include "Level.h"
 #include "Player.h"
+#include <iostream>
 
 using namespace std;
 
 int main(int args, char* argsv[])
 {
-	Window window = Window("Rouge Space", 1280, 720);
-	Level<2, 2> test = Level<2,2>();
-	Player *player = new Player();
+	EventController eventController = EventController();
 
-	test.GetTile(0, 0)->SetContents(player);
+	Window window = Window("Rouge Space", 1280, 720);
+	eventController.Subscribe(&window, SDL_QUIT);
+	Level<10, 10> test = Level<10,10>();
+	Player *player = new Player();
+	eventController.Subscribe(player, SDL_KEYDOWN);
+
+	test.GetTile(5, 5)->SetContents(player);
 	while (!window.IsClosed())
 	{
 		test.Draw(&window);
-		window.PollEvents();
+		eventController.PollEvents();
 		window.RenderObjects();
 	}
 
