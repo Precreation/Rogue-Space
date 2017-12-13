@@ -16,13 +16,13 @@ int main(int args, char* argsv[])
 	eventController.Subscribe(&window, SDL_QUIT);
 
 	// Create the level
-	Level<15, 15> test = Level<15,15>();
+	Level test = Level(11, 15);
 
 	// Create the player, subscribe it to the SDL_KeyDown Event and
-	// place the character into the tile (7,7)
+	// place the character into the tile (5,7)
 	PlayerCharacter *player = new PlayerCharacter();
 	eventController.Subscribe(player, SDL_KEYDOWN);
-	test.GetTile(7, 7)->SetContents(player);
+	test.GetTile(5, 7)->SetContents(player);
 
 	// Start the game loop
 	while (!window.IsClosed())

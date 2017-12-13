@@ -34,6 +34,9 @@
     <ClCompile Include="Window.cpp">
       <Filter>ControllerObjects\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tile.h">

@@ -12,7 +12,7 @@ private:
 	bool _closed;					// A boolean flag that tells if the window is closed
 	int _width, _height;			// The width and height for the window
 	SDL_Window *_window = nullptr;	// The SDL window that is being created
-	string _title;					// The string that will be shown in the titlebar of the window
+	string _title;					// The string that will be shown in the title bar of the window
 
 	bool Initialize();				// A method that initializes SDL and other window objects
 
