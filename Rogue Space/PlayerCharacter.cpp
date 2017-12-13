@@ -13,15 +13,14 @@ PlayerCharacter::PlayerCharacter()
 // Destructor
 PlayerCharacter::~PlayerCharacter(){}
 
-// A method that draws the object to the screen.
-// Overrides the RenderObjects Draw method.
+// A method that draws the object to the screen
 void PlayerCharacter::Draw(Window *window)
 {
 	SDL_SetRenderDrawColor(window->renderer, 255, 0, 0, 255);
 	SDL_RenderFillRect(window->renderer, &_tileImage);
 }
 
-// A method that deals with subscribed events when triggered.
+// A method that deals with subscribed events when triggered
 void PlayerCharacter::EventHandle(SDL_Event event)
 {
 	// When a key is pressed, check which key is pressed then 

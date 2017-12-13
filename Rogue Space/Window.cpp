@@ -13,7 +13,7 @@ Window::Window()
 	_closed = !Initialize();
 }
 
-// Constructor
+// Constructor with defined title, width and height
 Window::Window(string title, int width, int height)
 {
 	_title = title;
@@ -30,7 +30,7 @@ Window::~Window()
 	SDL_Quit();
 }
 
-// Initialize the components of the window
+// A method that initializes SDL and other window objects
 bool Window::Initialize()
 {
 	// Attempt to initialize SDL Video
@@ -62,13 +62,13 @@ bool Window::Initialize()
 	return true;
 }
 
-// Get the value of _closed
+// A method that tells if the window has closed
 bool Window::IsClosed()
 {
 	return _closed;
 }
 
-// Renders objects to the window
+// A method that renders all objects to the screen
 void Window::RenderObjects()
 {
 	SDL_RenderPresent(renderer);
@@ -76,7 +76,7 @@ void Window::RenderObjects()
 	SDL_RenderClear(renderer);
 }
 
-// Evaluate window events
+// A method that deals with subscribed events when triggered
 void Window::EventHandle(SDL_Event event)
 {
 	_closed = true;

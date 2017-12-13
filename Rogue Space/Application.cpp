@@ -32,5 +32,6 @@ int main(int args, char* argsv[])
 		window.RenderObjects();
 	}
 
+	// Exit the application
 	return 0;
 }

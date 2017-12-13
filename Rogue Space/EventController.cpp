@@ -1,5 +1,6 @@
 #include "EventController.h"
 
+// A method that polls all SDL Events
 void EventController::PollEvents() 
 {
 	if (SDL_PollEvent(&_event))
@@ -18,6 +19,7 @@ void EventController::PollEvents()
 	}
 }
 
+// A method that subscribes a event handler to the given event
 void EventController::Subscribe(EventHandler *handler, SDL_EventType eventType)
 {
 	switch (eventType) 
