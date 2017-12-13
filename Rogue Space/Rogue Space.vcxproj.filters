@@ -1,63 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="GameObjects">
+      <UniqueIdentifier>{c494d7d4-4b0a-4b3b-8114-34c82adf0ae1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    <Filter Include="GameObjects\Header Files">
+      <UniqueIdentifier>{6d6b9fe0-99f8-4b66-be83-3c4d6a3ba3d0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="GameObjects\Source Files">
+      <UniqueIdentifier>{e9e5c86d-88fa-4e89-bb72-8d4e79e96fde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ControllerObjects">
+      <UniqueIdentifier>{d4b97b69-97c5-4ef7-929a-0684729af2b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ControllerObjects\Header Files">
+      <UniqueIdentifier>{5963d188-8e9f-4aef-b189-c0eb0a7c1b24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ControllerObjects\Source Files">
+      <UniqueIdentifier>{20e7299d-ae90-48f8-a67f-94025e09baeb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="PlayerCharacter.cpp">
+      <Filter>GameObjects\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Tile.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>GameObjects\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Application.cpp" />
     <ClCompile Include="EventController.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>ControllerObjects\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerCharacter.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Window.cpp">
+      <Filter>ControllerObjects\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Window.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Tile.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Level.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderObject.h">
-      <Filter>Header Files</Filter>
+      <Filter>GameObjects\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TileObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Character.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EventHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EventController.h">
-      <Filter>Header Files</Filter>
+      <Filter>GameObjects</Filter>
     </ClInclude>
     <ClInclude Include="PlayerCharacter.h">
-      <Filter>Header Files</Filter>
+      <Filter>GameObjects\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>GameObjects\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderObject.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="EventController.h">
+      <Filter>ControllerObjects\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHandler.h">
+      <Filter>ControllerObjects\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>ControllerObjects\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
